@@ -3,6 +3,7 @@
 #include<conio.h>
 #include<math.h>
 
+
 float pctg(int);
 
 int main()
