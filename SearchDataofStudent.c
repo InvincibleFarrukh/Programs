@@ -44,6 +44,17 @@ int main()
     system("cls");
 
     print_data(std, SIZE);
+    
+    FILE *ptr;
+    ptr= fopen("Student Data File Program.txt", "w");
+    
+    for(i=0; i<SIZE; i++)
+    {
+        fprintf(ptr, "Name of the student is %s\n", std[i].name);
+        fprintf(ptr, "Roll Number of %s is %d\n", std[i].name, std[i].roll);
+        fprintf(ptr, "Date of Birth of %s is: %d/%s/%d\n\n", std[i].name, std[i].db.date, std[i].db.month, std[i].db.year);
+    }
+    fclose(ptr);
 
     system("pause");
     system("cls");
@@ -83,3 +94,5 @@ void print_data(struct student std[],int SIZE)
         printf("Date of Birth of %s is: %d/%s/%d\n\n", std[i].name, std[i].db.date, std[i].db.month, std[i].db.year);
     }
 }
+
+
